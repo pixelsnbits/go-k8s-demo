@@ -7,6 +7,7 @@ import (
 
 func main() {
 	e := echo.New()
+	e.HideBanner = true
 	e.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "!Dlrow, olleH")
 	})

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-k8s-demo
+  labels:
+    app: go-k8s-demo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: go-k8s-demo
+  template:
+    metadata:
+      labels:
+        app: go-k8s-demo
+    spec:
+      containers:
+      - name: go-k8s-demo
+        image: us.gcr.io/make-a-devops-k8s/go-k8s-demo:0.1
+        ports:
+        - containerPort: 1337

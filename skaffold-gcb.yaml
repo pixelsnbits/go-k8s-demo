@@ -1,0 +1,12 @@
+apiVersion: skaffold/v1alpha2
+kind: Config
+build:
+  artifacts:
+  - imageName: us.gcr.io/make-a-devops-k8s/go-k8s-demo
+    workspace: .
+  googleCloudBuild:
+    projectId: make-a-devops-k8s
+deploy:
+  kubectl:
+    manifests:
+    - ./k8s/prod/*

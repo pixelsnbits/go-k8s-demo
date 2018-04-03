@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: go-k8s-demo
-        image: us.gcr.io/make-a-devops-k8s/go-k8s-demo:0.2
+        image: us.gcr.io/make-a-devops-k8s/go-k8s-demo:0.3
         ports:
         - containerPort: 1337

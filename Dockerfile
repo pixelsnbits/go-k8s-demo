@@ -2,7 +2,7 @@ FROM golang:1.11-stretch as gobuild
 RUN mkdir -p /go/src
 WORKDIR /go/src/go-k8s-demo
 COPY main.go .
-RUN go get -u github.com/labstack/echo/...
+RUN go get -u github.com/labstack/echo
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
 go build -o bin/app main.go
 
